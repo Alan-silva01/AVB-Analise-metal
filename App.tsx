@@ -183,11 +183,11 @@ const App: React.FC = () => {
           <div className="max-w-7xl mx-auto px-4 text-center">
             <div className="flex justify-center items-center gap-2 mb-2 opacity-50 grayscale hover:grayscale-0 transition-all">
                 {/* Mini Logo Footer */}
-                <div className="w-6 h-6 bg-avb rounded-full overflow-hidden relative flex items-center justify-center">
-                   <svg viewBox="0 0 100 100" className="w-full h-full p-1 fill-white">
-                      <path d="M20 80 C 20 80, 25 30, 80 20 C 60 20, 50 40, 45 55 C 40 70, 25 80, 20 80 Z" />
-                   </svg>
-                </div>
+                <img 
+                  src="https://tkrtkzudwptjycqvksrc.supabase.co/storage/v1/object/public/logo%20upzy/Logotipo%20Design%20(10).png" 
+                  alt="AVB Logo" 
+                  className="w-8 h-8 object-contain"
+                />
                 <span className="font-bold text-gray-700">AVB</span>
             </div>
             <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Aço Verde do Brasil. Todos os direitos reservados.</p>
