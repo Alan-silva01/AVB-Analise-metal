@@ -81,7 +81,7 @@ const RadarSummary: React.FC = () => {
         </div>
 
         <div className="p-4 md:p-8 flex flex-col md:flex-row items-center justify-center gap-8">
-          <div className="h-[350px] w-full md:w-2/3 relative">
+          <div className="h-[350px] w-full md:w-2/3 relative flex flex-col items-center">
             <ResponsiveContainer width="100%" height="100%">
               <RadarChart cx="50%" cy="50%" outerRadius="75%" data={data}>
                 <PolarGrid stroke="#e5e7eb" />
@@ -107,6 +107,12 @@ const RadarSummary: React.FC = () => {
                 <Legend iconType="circle" />
               </RadarChart>
             </ResponsiveContainer>
+            
+            <div className="mt-2 text-center">
+              <p className="text-sm text-gray-600 italic bg-gray-50 px-4 py-2 rounded-lg border border-gray-100 inline-block">
+                <strong>Leitura rápida:</strong> O Metal Duro se destaca em vida útil, disponibilidade e capacidade produtiva, enquanto o HSS tem vantagem apenas no custo inicial.
+              </p>
+            </div>
           </div>
           
           <div className="w-full md:w-1/3 space-y-4">
@@ -116,7 +122,7 @@ const RadarSummary: React.FC = () => {
               </div>
               <div className="p-4 bg-slate-50 rounded-lg border border-gray-100">
                   <h4 className="font-bold text-gray-500 text-lg mb-1">Aço Rápido (HSS)</h4>
-                  <p className="text-sm text-gray-600">Apresenta vantagem no custo de aquisição inicial e impacto financeiro imediato reduzido.</p>
+                  <p className="text-sm text-gray-600">Apresenta vantagem no custo de aquisição inicial e menor desembolso inicial.</p>
               </div>
           </div>
         </div>
@@ -133,7 +139,7 @@ const RadarSummary: React.FC = () => {
             <div>
                 <h3 className="text-lg font-bold text-gray-700 mb-4 flex items-center gap-2">
                     <DollarSign className="text-gray-400" />
-                    Cenário Financeiro.
+                    Cenário Financeiro
                 </h3>
                 <div className="bg-slate-50 p-5 rounded-xl border border-gray-200 space-y-4">
                     <p className="text-gray-700 text-sm leading-relaxed">
@@ -159,16 +165,16 @@ const RadarSummary: React.FC = () => {
             <div>
                 <h3 className="text-lg font-bold text-avb mb-4 flex items-center gap-2">
                     <Clock className="text-avb" />
-                    Cenário Operacional.
+                    Cenário Operacional
                 </h3>
                 <div className="bg-green-50 p-5 rounded-xl border border-green-100 space-y-4">
                     <p className="text-gray-800 text-sm leading-relaxed">
-                        Em termos de eficiência produtiva e confiabilidade, o <strong>Metal Duro</strong> apresenta indicadores superiores.
+                        Em termos de eficiência produtiva e confiabilidade, o <strong>Metal Duro</strong> entrega melhor desempenho operacional.
                     </p>
                     <ul className="space-y-2">
                         <li className="flex items-start gap-2 text-sm text-gray-700">
                             <CheckCircle2 size={16} className="text-avb mt-1 shrink-0" />
-                            <span><strong>Disponibilidade:</strong> Projeção de +540 horas de produção em 5 anos devido à redução de paradas.</span>
+                            <span><strong>Disponibilidade:</strong> Projeção de +540 horas de produção em 5 anos devido à redução de paradas (Equivalente a mais de 22 dias de máquina parada evitados no período).</span>
                         </li>
                         <li className="flex items-start gap-2 text-sm text-gray-700">
                             <CheckCircle2 size={16} className="text-avb mt-1 shrink-0" />
@@ -181,15 +187,18 @@ const RadarSummary: React.FC = () => {
 
         <div className="mt-8 pt-6 border-t border-gray-100">
             <h3 className="text-xl font-bold text-gray-900 mb-3">Análise Final</h3>
-            <p className="text-gray-700 leading-relaxed mb-4">
-                O Aço Rápido (HSS) exige um investimento menor, com custo cerca de 35% mais baixo ao longo de 5 anos, sendo uma opção mais econômica no curto prazo.
-            </p>
-            <p className="text-gray-700 leading-relaxed mb-4">
-                O Metal Duro, por outro lado, apresenta desempenho superior na operação. Sua vida útil é aproximadamente 5 vezes maior e a menor necessidade de trocas gera um ganho estimado de 540 horas de máquina disponível no período analisado.
-            </p>
-            <p className="text-gray-700 leading-relaxed">
-                A decisão deve equilibrar o menor custo inicial com a necessidade de maior produtividade, menos paradas e mais estabilidade no processo produtivo.
-            </p>
+            <div className="space-y-4 text-gray-700 leading-relaxed">
+              <p>
+                  O Aço Rápido (HSS) apresenta menor custo inicial, sendo uma alternativa viável quando a prioridade é reduzir desembolso no curto prazo.
+              </p>
+              <p>
+                  O Metal Duro, apesar do investimento maior, entrega ganhos operacionais relevantes: vida útil cerca de 5 vezes superior, redução significativa de paradas e um ganho estimado de 540 horas de máquina disponível ao longo de 5 anos.
+              </p>
+              <p className="font-medium text-gray-800">
+                  Para operações contínuas e com foco em produtividade, estabilidade e maior capacidade de produção, o Metal Duro se mostra a opção mais eficiente.
+                  Já o HSS é indicado para cenários de menor volume ou quando o investimento inicial é o principal fator de decisão.
+              </p>
+            </div>
         </div>
       </div>
     </div>

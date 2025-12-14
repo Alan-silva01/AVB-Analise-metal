@@ -77,7 +77,7 @@ const FiveYearProjection: React.FC = () => {
             </ResponsiveContainer>
           </div>
           <div className="mt-4 p-3 bg-white rounded border border-gray-200 text-sm text-gray-600">
-             Apesar da diferença de <span className="text-red-500 font-bold">R$ 95.686,40</span> a mais no custo direto do Metal Duro, a eficiência operacional compensa o investimento.
+             Apesar do custo total maior, o Metal Duro reduz trocas, paradas e tempo ocioso, o que compensa o investimento ao longo do período analisado.
           </div>
         </div>
 
@@ -104,7 +104,7 @@ const FiveYearProjection: React.FC = () => {
             </ResponsiveContainer>
           </div>
           <div className="mt-4 p-3 bg-white rounded border border-gray-200 text-sm text-gray-600">
-             O Metal Duro exige <span className="font-bold text-avb">60% menos intervenções</span> de troca, aumentando drasticamente a estabilidade da linha.
+             O Metal Duro permite uma <span className="font-bold text-avb">redução significativa de trocas</span> (60% menos intervenções), aumentando drasticamente a estabilidade da linha.
           </div>
         </div>
       </div>
